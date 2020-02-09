@@ -11,7 +11,8 @@ public class GeoRetriever {
 
     public LocationDTO getLocation(String ip) {
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<LocationDTO> response = restTemplate.getForEntity(URL + ip, LocationDTO.class);
+        ResponseEntity<LocationDTO> response = restTemplate.getForEntity(URL + ip,
+                LocationDTO.class);
         return response.getBody();
     }
 }
